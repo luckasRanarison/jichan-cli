@@ -1,0 +1,3 @@
+# JiChan
+
+JiChan is a CLI application which provides tools for learning japanese such as a dictionary, flashcards,...
