@@ -1,5 +1,5 @@
 import database from "../db/config";
-import { KanjiOption, Kanji } from "../../interface";
+import { KanjiOption } from "../../interface";
 import { Op } from "sequelize";
 import { isHiragana, isRomaji, toHiragana, toKatakana } from "wanakana";
 
