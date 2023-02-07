@@ -1,11 +1,24 @@
 {
   "name": "jichan-cli",
-  "version": "1.0.0",
-  "description": "A CLI application for learning japanese",
-  "main": "dist/electron/main.js",
+  "version": "0.1.0",
+  "description": "CLI Japanese Dictionary",
+  "main": "dist/src/index.js",
+  "bin": "dist/src/index.js",
+  "pkg": {
+    "outputPath": "bin",
+    "assets": [
+      "db/jichan.db"
+    ],
+    "targets": [
+      "node14-linux",
+      "node14-darwin",
+      "node14-windows"
+    ]
+  },
   "scripts": {
-    "dev": "tsc --watch",
-    "test": "jest"
+    "watch": "tsc --watch",
+    "test": "jest",
+    "build": "tsc && pkg --compress GZip ."
   },
   "keywords": [
     "CLI",
@@ -33,6 +46,7 @@
     "sequelize": "^6.28.0",
     "sequelize-typescript": "^2.1.5",
     "sqlite3": "^5.1.4",
-    "wanakana": "^5.0.2"
+    "wanakana": "^5.0.2",
+    "pkg": "5.8.0"
   }
 }
